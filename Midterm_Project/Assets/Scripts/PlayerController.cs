@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public KeyCode leftKey;
     public KeyCode jumpKey;
 
-    public Collider2D ground;
     private Rigidbody2D rb;
 
     public float speedMultiplier = 10f;
@@ -55,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.collider == ground)
+        if (other.collider.gameObject.CompareTag("isGround"))
         {
             isGrounded = true;
         }
