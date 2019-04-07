@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FoodScript : MonoBehaviour
+public class GoalScript : MonoBehaviour
 {
     private Animator anim;
     
@@ -23,7 +23,7 @@ public class FoodScript : MonoBehaviour
         if (other.CompareTag("isFood"))
         {
             Destroy(other.gameObject);
-            anim.Play("Mouth");
+            anim.SetTrigger("isEating");
             
             print("I've been eaten!");
         }
