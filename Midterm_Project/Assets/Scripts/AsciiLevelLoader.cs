@@ -34,6 +34,12 @@ public class AsciiLevelLoader : MonoBehaviour
                     case 'X':
                         tile = Instantiate(Resources.Load<GameObject>("Prefabs/Wall"));
                         break;
+                    case 'L':
+                        tile = Instantiate(Resources.Load<GameObject>("Prefabs/Ledge"));
+                        break;
+                    case 'M':
+                        tile = Instantiate(Resources.Load<GameObject>("Prefabs/MovingLedge"));
+                        break;
                     case 'O':
                         tile = Instantiate(Resources.Load<GameObject>("Prefabs/" + Food));
                         break;
