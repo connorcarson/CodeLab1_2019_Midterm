@@ -1,4 +1,13 @@
-X-------X
-X-------X
-X--PO---X
-XXXXXXXXX
+XXXXXXXXXXXXXXXXXXX
+X----------------OX
+X---O------O-XXXXXX
+X--XXXXXXXXXX-----X
+X-X---------------X
+XX--O----O--------X
+XXXXXXXXXXXX------X
+X-----------X-----X
+X------------X--O-X
+X-------------XXXXX
+X---P------OXXXXXXX
+X---------XXXXXXXXX
+XXXXXXXXXXXXXXXXXX

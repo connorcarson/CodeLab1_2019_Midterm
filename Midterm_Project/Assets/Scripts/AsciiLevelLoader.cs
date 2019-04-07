@@ -7,6 +7,7 @@ public class AsciiLevelLoader : MonoBehaviour
 {
     public string textFile = "/Text/Level1.txt";
     public string Player;
+    public string Food;
     
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class AsciiLevelLoader : MonoBehaviour
                         tile = Instantiate(Resources.Load<GameObject>("Prefabs/Wall"));
                         break;
                     case 'O':
-                        tile = Instantiate(Resources.Load<GameObject>("Prefabs/Cheerio"));
+                        tile = Instantiate(Resources.Load<GameObject>("Prefabs/" + Food));
                         break;
                     case 'P':
                         tile = Instantiate(Resources.Load<GameObject>("Prefabs/" + Player));

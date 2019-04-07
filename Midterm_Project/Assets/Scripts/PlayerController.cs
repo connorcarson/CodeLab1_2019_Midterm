@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float speedMultiplier = 10f;
     public float jumpVelocity = 10f;
     public float fallMultiplier = 10f;
-
+    
     public bool isGrounded;
     
     // Start is called before the first frame update
