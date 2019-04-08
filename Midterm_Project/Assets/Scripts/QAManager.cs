@@ -4,14 +4,17 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using System.Xml;
+using UnityEngine.SceneManagement;
 
 public class QAManager : MonoBehaviour
 {
-    private QANode currentNode;
+    public QANode currentNode;
 
     public Text questionText;
     public Text option1Text;
     public Text option2Text;
+
+    private string fileLocation;
     
     // Start is called before the first frame update
     void Start()
@@ -46,12 +49,44 @@ public class QAManager : MonoBehaviour
     }
 
     public void ChooseOption(int pageNumber) //option function for button UI
-    {   //which .json file are we referencing
-        string fileLocation = Application.dataPath + "/Text/QAPage" + currentNode.option1Page + ".json";
-        if (pageNumber != 1)
+    {
+        switch (currentNode.pageNumber)
         {
-            fileLocation = Application.dataPath + "/Text/QAPage" + currentNode.option2Page + ".json";
-        }        
+            case 1:
+                fileLocation = Application.dataPath + "/Text/QAPage" + currentNode.option1Page + ".json";
+                if (pageNumber != 1)
+                {
+                    fileLocation = Application.dataPath + "/Text/QAPage" + currentNode.option2Page + ".json";
+                }
+
+                break;
+            case 2:
+                if (pageNumber == 1)
+                {
+                    SceneManager.LoadScene(1);
+                }
+                else
+                {
+                    fileLocation = Application.dataPath + "/Text/QAPage1.json";
+                }
+
+                break;
+            case 3:
+                if (pageNumber == 1)
+                {
+                    print("No Scene to load.");
+                }
+                else
+                {
+                    fileLocation = Application.dataPath + "/Text/QAPage1.json";
+                }
+
+                break;
+            default:
+                break;
+        }
+        // print(currentNode.pageNumber);
+        
         //convert that .json file into text
         ReadFromJson(fileLocation);
         //update the UI according to that text

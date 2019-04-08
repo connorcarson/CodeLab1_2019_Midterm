@@ -10,6 +10,7 @@ public class QANode
     public int pageNumber;
     public int option1Page;
     public int option2Page;
+    public int option3Page;
 
     public QANode option1;
     public QANode option2;

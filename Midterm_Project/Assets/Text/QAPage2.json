@@ -1,8 +1,8 @@
 {
-    "questionText": "You come to a fork in the road.\n There is also a spoon here.",
-    "option1Text": "Take fork",
-    "option2Text": "Take Spoon",
-    "pageNumber": 1,
-    "option1Page": 0,
-    "option2Page": 0
+    "questionText": "You continue down the forest path.\n There is a bowl of cereal here.",
+    "option1Text": "Eat cereal",
+    "option2Text": "Go back",
+    "pageNumber": 2,
+    "option1Page": 4,
+    "option2Page": 1
 }
