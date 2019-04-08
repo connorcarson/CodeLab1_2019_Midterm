@@ -24,8 +24,8 @@ public class GoalScript : MonoBehaviour
         {
             Destroy(other.gameObject);
             anim.SetTrigger("isEating");
-            
-            print("I've been eaten!");
+            GameManager.instance.Food--;
+            //print("I've been eaten!");
         }
     }
 }
