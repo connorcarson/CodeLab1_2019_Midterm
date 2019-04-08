@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.collider.gameObject.CompareTag("isGround"))
+        if (other.collider.gameObject.CompareTag("isGround") || other.collider.gameObject.CompareTag("isFood"))
         {
             isGrounded = true;
         }

@@ -43,7 +43,7 @@ public class QAManager : MonoBehaviour
             "Take Spoon");
 
         string JsonStr = JsonUtility.ToJson(currentNode, true);
-        print(JsonStr);
+        //print(JsonStr);
         
         File.WriteAllText(fileLocation, JsonStr);
     }
@@ -74,7 +74,7 @@ public class QAManager : MonoBehaviour
             case 3:
                 if (pageNumber == 1)
                 {
-                    print("No Scene to load.");
+                    SceneManager.LoadScene(2);
                 }
                 else
                 {
@@ -96,7 +96,7 @@ public class QAManager : MonoBehaviour
     void ReadFromJson(string fileLocation) //convert .Json text into text in current node
     {
         string Input = File.ReadAllText(fileLocation);
-        print(Input);
+        //print(Input);
 
         currentNode = JsonUtility.FromJson<QANode>(Input);
     }

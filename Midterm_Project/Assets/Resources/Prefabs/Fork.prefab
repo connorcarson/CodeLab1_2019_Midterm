@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5647642366190434746}
   m_LocalRotation: {x: -0, y: -0, z: 0.000002905726, w: 1}
   m_LocalPosition: {x: 0.12, y: 1.49, z: 0}
-  m_LocalScale: {x: 1.5496366, y: 1.5496366, z: 1.5496366}
+  m_LocalScale: {x: 1.7219558, y: 1.7219558, z: 1.7219558}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   rightKey: 275
   leftKey: 276
   jumpKey: 32
-  speedMultiplier: 2
+  speedMultiplier: 3.5
   jumpVelocity: 6
   fallMultiplier: 6
   isGrounded: 0

@@ -1,13 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Text cheeriosLeft;
-    
-    private int foods = 15;
+    public Image winPanel;
+    public Button playAgainButton;
+    public GameObject winText;
+    public Text foodLeft;
+    public string foodNum;
+
+
+    public int foods;
     public int Food
     {
         get
@@ -17,7 +23,7 @@ public class GameManager : MonoBehaviour
         set
         {
             foods = value;
-            cheeriosLeft.text = foods + "/15";
+            foodLeft.text = foods + foodNum;
         }
     }
 
@@ -28,7 +34,7 @@ public class GameManager : MonoBehaviour
     {
         if (instance == null)
         {
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
             instance = this;
         }
         else
@@ -37,9 +43,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        GameOver();
+    }
+
+    private void GameOver()
+    {
+        if (Food <= 0)
+        {
+            winText.SetActive(true);
+            playAgainButton.gameObject.SetActive(true);
+            winPanel.gameObject.SetActive(true);
+        }
+    }
+
+    public void StartOver()
+    {
+        SceneManager.LoadScene(0);
     }
 }
